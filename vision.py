@@ -36,7 +36,7 @@ class Target:
     distance: float    # meters (estimated from apparent size)
     box: tuple         # (x1, y1, x2, y2) pixels, for drawing
     confidence: float = 1.0
-
+    label: str = "unknown"
 
 # ------------------------------------------------------------ person tag ----
 class PersonTracker:
