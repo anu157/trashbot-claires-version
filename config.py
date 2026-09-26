@@ -24,7 +24,13 @@ TAG_SIZE_M = 0.15  # black border edge length of the printed tag, in meters
 # where the Open Images model ("yolov8n-oiv7.pt", class "Waste container")
 # scored 0.35 or missed them. Switch to the oiv7 model if the Pi is too slow.
 BIN_MODEL = "yolov8s-worldv2.pt"
-BIN_PROMPTS = ["trash can", "garbage bin", "recycling bin"]  # used by YOLO-World
+BIN_PROMPTS = ["trash can", "garbage bin", "recycling bin", "compost bin"]  # used by YOLO-World
+BIN_LABEL_TO_TYPE = {
+    "trash can": "trash",
+    "garbage bin": "trash",
+    "recycling bin": "recycling",
+    "compost bin": "compost",
+}
 BIN_CLASS_NAMES = ["Waste container"]  # used by the Open Images model
 BIN_CONFIDENCE = 0.3
 BIN_IMGSZ = 320
